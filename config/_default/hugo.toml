@@ -1,0 +1,60 @@
+copyright = "© Plotkai Interactive"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+languageCode = "en"
+timeZone = "Asia/Kolkata"
+timeout = "120s"
+title = ""
+
+[params]
+  defaultTheme = "dark"
+  description = "Come bunk with us."
+  title = "Unskooling Day"
+  [params.author]
+    email = "bunk@unskooling.day"
+    name = "Plotkai Interactive"
+  [params.socialIcons]
+    #facebook = "https://www.facebook.com/"
+    instagram = "https://www.instagram.com/unskooling.day"
+    #github = "https://github.com/nicokaiser/hugo-theme-gallery/"
+    #youtube = "https://www.youtube.com/"
+    email = "mailto:bunk@unskooling.day"
+    #website = "https://example.com"
+    #mastodon = "https://example.com"
+    #pixelfed = "https://example.com"
+    #mixcloud = "https://example.com"
+    #flickr = "https://www.flickr.com"
+    #500px = "https://500px"
+    whatsapp = "9044399422"
+  [params.gallery]
+    #boxSpacing = 10
+    #targetRowHeight = 288
+    #targetRowHeightTolerance = 0.25
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [module.hugoVersion]
+    min = "0.121.2"
+
+[menu]
+  [[menu.footer]]
+    name = "GitHub"
+    url = "https://github.com/nicokaiser/hugo-theme-gallery/"
+    weight = 3
+
+[services]
+  [services.rss]
+    limit = 100
