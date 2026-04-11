@@ -1,7 +1,7 @@
 ---
 description: An immersive experience of building life.
 #lastmod: 2023-07-05
-title: Unskolling Day
+title: Unskooling Day
 resources:
   - src: martin-martz-wRuhOOaG-Z4-unsplash.jpg
     params:

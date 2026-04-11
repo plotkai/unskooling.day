@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Unskolling Day on </title>
+    <title>Unskooling Day on </title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Unskolling Day on </description>
+    <description>Recent content in Unskooling Day on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>bunk@unskooling.day (Plotkai Interactive)</managingEditor>
@@ -11,43 +11,43 @@
     <copyright>© Plotkai Interactive</copyright>
     <lastBuildDate>Sat, 01 Apr 2023 00:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fashion &amp; Beauty</title>
-      <link>http://localhost:1313/fashion-beauty/</link>
+      <title>Young Explorers</title>
+      <link>http://localhost:1313/young-explorers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/fashion-beauty/</guid>
-        <media:content url="http://localhost:1313/fashion-beauty/mina-rad-V94CguEmeos-unsplash_hu_4daec65097ecda83.jpg" type="image/jpeg"/>
+      <guid>http://localhost:1313/young-explorers/</guid>
+        <media:content url="http://localhost:1313/young-explorers/jingle-makers_hu_9e48709600feda6e.png" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/fashion-beauty/mina-rad-V94CguEmeos-unsplash_hu_4daec65097ecda83.jpg&quot; /&gt;
-          &lt;p&gt;Fashion and Beauty are a powerful form of self-expression. This category documents style through inspiring shots of street fashion, skincare products, avant-garde editorial photographs, and more.&lt;/p&gt;
+          &lt;img src=&quot;http://localhost:1313/young-explorers/jingle-makers_hu_9e48709600feda6e.png&quot; /&gt;
+          &lt;p&gt;Fashion are a powerful form of self-expression. This category documents style through inspiring shots of street fashion, skincare products, avant-garde editorial photographs, and more.&lt;/p&gt;
         </description></item>
     <item>
-      <title>Nature</title>
-      <link>http://localhost:1313/nature/</link>
+      <title>Pro Kids</title>
+      <link>http://localhost:1313/pro-kids/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/nature/</guid>
-        <media:content url="http://localhost:1313/nature/azzedine-rouichi-ZS_XuDZmxpM-unsplash_hu_bb8bb25c016ae9d3.jpg" type="image/jpeg"/>
+      <guid>http://localhost:1313/pro-kids/</guid>
+        <media:content url="http://localhost:1313/pro-kids/startup_hu_481aac143513e94b.png" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/nature/azzedine-rouichi-ZS_XuDZmxpM-unsplash_hu_bb8bb25c016ae9d3.jpg&quot; /&gt;
+          &lt;img src=&quot;http://localhost:1313/pro-kids/startup_hu_481aac143513e94b.png&quot; /&gt;
           &lt;p&gt;Through photography, the beauty of Mother Nature can be frozen in time. This category celebrates the magic of our planet and beyond — from the immensity of the great outdoors, to miraculous moments in your own backyard.&lt;/p&gt;
         </description></item>
     <item>
-      <title>Cats</title>
-      <link>http://localhost:1313/animals/cats/</link>
+      <title>Indoor</title>
+      <link>http://localhost:1313/toddlers/indoor/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0530</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/animals/cats/</guid>
-        <media:content url="http://localhost:1313/animals/cats/manja-vitolic-gKXKBY-C-Dk-unsplash_hu_4622d9d226e7bc65.jpg" type="image/jpeg"/>
+      <guid>http://localhost:1313/toddlers/indoor/</guid>
+        <media:content url="http://localhost:1313/toddlers/indoor/rhythm-and-paint_hu_8908312831f2c19e.png" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/animals/cats/manja-vitolic-gKXKBY-C-Dk-unsplash_hu_4622d9d226e7bc65.jpg&quot; /&gt;
+          &lt;img src=&quot;http://localhost:1313/toddlers/indoor/rhythm-and-paint_hu_8908312831f2c19e.png&quot; /&gt;
           &lt;p&gt;&lt;no value&gt;&lt;/p&gt;
         </description></item>
     <item>
-      <title>Dogs</title>
-      <link>http://localhost:1313/animals/dogs/</link>
+      <title>Outdoors</title>
+      <link>http://localhost:1313/toddlers/outdoors/</link>
       <pubDate>Thu, 12 Jan 2023 00:00:00 +0530</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/animals/dogs/</guid>
-        <media:content url="http://localhost:1313/animals/dogs/milli-2l0CWTpcChI-unsplash_hu_751ace6215d5b3ae.jpg" type="image/jpeg"/>
+      <guid>http://localhost:1313/toddlers/outdoors/</guid>
+        <media:content url="http://localhost:1313/toddlers/outdoors/nature-scouts_hu_ae3801880da28b17.png" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/animals/dogs/milli-2l0CWTpcChI-unsplash_hu_751ace6215d5b3ae.jpg&quot; /&gt;
+          &lt;img src=&quot;http://localhost:1313/toddlers/outdoors/nature-scouts_hu_ae3801880da28b17.png&quot; /&gt;
           &lt;p&gt;&lt;no value&gt;&lt;/p&gt;
         </description></item>
   </channel>

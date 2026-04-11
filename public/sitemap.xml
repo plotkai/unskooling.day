@@ -2,34 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/animals/</loc>
+    <loc>http://localhost:1313/toddlers/</loc>
     <lastmod>2023-04-01T00:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fashion-beauty/</loc>
+    <loc>http://localhost:1313/young-explorers/</loc>
   </url><url>
-    <loc>http://localhost:1313/nature/</loc>
+    <loc>http://localhost:1313/pro-kids/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/animals/</loc>
+    <loc>http://localhost:1313/toddlers/indoor/</loc>
     <lastmod>2023-04-01T00:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/animals/cats/</loc>
-    <lastmod>2023-04-01T00:00:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/nature/</loc>
+    <loc>http://localhost:1313/categories/toddlers/</loc>
     <lastmod>2023-04-01T00:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2023-04-01T00:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/animals/dogs/</loc>
+    <loc>http://localhost:1313/toddlers/outdoors/</loc>
     <lastmod>2023-01-12T00:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/beauty/</loc>
+    <loc>http://localhost:1313/privacy/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/fashion/</loc>
+    <loc>http://localhost:1313/categories/pro-kids/</loc>
   </url><url>
-    <loc>http://localhost:1313/imprint/</loc>
+    <loc>http://localhost:1313/categories/young-explorers/</loc>
   </url>
 </urlset>
