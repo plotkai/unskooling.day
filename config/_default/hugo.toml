@@ -8,7 +8,7 @@ timeout = "120s"
 title = ""
 
 [params]
-  defaultTheme = "dark"
+  defaultTheme = "light"
   description = "Come bunk with us."
   title = "Unskooling Day"
   [params.author]

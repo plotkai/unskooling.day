@@ -1,5 +1,5 @@
 ---
-description: An immersive experience of building life.
+description: Because Life is the Real Classroom.
 #lastmod: 2023-07-05
 title: Unskooling Day
 resources:

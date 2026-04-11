@@ -11,6 +11,16 @@
     <copyright>© Plotkai Interactive</copyright>
     <lastBuildDate>Sat, 01 Apr 2023 00:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/categories/toddlers/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Toddlers</title>
+      <link>http://localhost:1313/toddlers/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0530</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
+      <guid>http://localhost:1313/toddlers/</guid>
+        <media:content url="http://localhost:1313/toddlers/toddlers-day_hu_c4bef33c41196e9d.png" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/toddlers/toddlers-day_hu_c4bef33c41196e9d.png&quot; /&gt;
+          &lt;p&gt;This is the &#34;Toddlers&#34; learning section.&lt;/p&gt;
+        </description></item>
+    <item>
       <title>Indoor</title>
       <link>http://localhost:1313/toddlers/indoor/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0530</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>

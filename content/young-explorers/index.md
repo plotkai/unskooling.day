@@ -5,7 +5,7 @@ title: Young Explorers
 weight: 2
 categories: ["young explorers"]
 params:
-  theme: dark
+  theme: light
 resources:
   - src: mina-rad-V94CguEmeos-unsplash.jpg
     params:

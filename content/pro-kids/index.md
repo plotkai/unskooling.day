@@ -6,7 +6,7 @@ categories: ["Pro Kids"]
 weight: 3
 params:
   featured_image: toddlers-day.png
-  theme: dark
+  theme: light
   sort_order: desc
   sort_by: Name # Exif.Date
 # resources:
