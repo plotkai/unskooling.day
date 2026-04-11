@@ -5,7 +5,7 @@ title: Pro Kids
 categories: ["Pro Kids"]
 weight: 3
 params:
-  featured_image: startup.png
+  featured_image: toddlers-day.png
   theme: dark
   sort_order: desc
   sort_by: Name # Exif.Date
