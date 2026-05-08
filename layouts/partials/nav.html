@@ -11,27 +11,26 @@
     <!-- Desktop Nav Links -->
     <div class="hidden md:flex items-center gap-8">
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" 
-           class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
-           id="nav-{{ anchorize .Name }}">
-          {{ .Name }}
-        </a>
+      <a href="{{ .URL }}"
+        class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
+        id="nav-{{ anchorize .Name }}">
+        {{ .Name }}
+      </a>
       {{ end }}
     </div>
 
     <!-- CTA + Mobile Toggle -->
     <div class="flex items-center gap-3 sm:gap-4">
-      <a href="{{ .Site.Params.joinFormURL }}" 
-         target="_blank"
-         class="btn-primary !py-2 !px-3 !text-xs sm:!py-3 sm:!px-6 sm:!text-sm animate-pulse-glow"
-         id="nav-join-cta">
-        Join the Circle ✨
-      </a>
+      <div class="flex items-center gap-1.5 text-deep/70 font-medium text-sm bg-warm-100/50 py-1.5 px-3 rounded-full border border-warm-200" id="nav-location">
+        <span class="text-brand-orange text-base leading-none mt-[1px]">📍</span> 
+        <span class="hidden sm:inline">Bangalore</span>
+        <span class="sm:hidden">BLR</span>
+      </div>
 
       <!-- Mobile Hamburger -->
-      <button id="mobile-menu-toggle" 
-              class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-warm-100 transition-colors"
-              aria-label="Toggle menu">
+      <button id="mobile-menu-toggle"
+        class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-warm-100 transition-colors"
+        aria-label="Toggle menu">
         <span class="w-6 h-0.5 bg-deep rounded-full transition-all" id="burger-line-1"></span>
         <span class="w-6 h-0.5 bg-deep rounded-full transition-all" id="burger-line-2"></span>
         <span class="w-4 h-0.5 bg-deep rounded-full transition-all" id="burger-line-3"></span>
@@ -43,15 +42,13 @@
   <div id="mobile-menu" class="md:hidden hidden">
     <div class="mt-4 pb-4 border-t border-warm-200 pt-4 flex flex-col gap-4">
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" 
-           class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
-           onclick="closeMobileMenu()">
-          {{ .Name }}
-        </a>
+      <a href="{{ .URL }}"
+        class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+        onclick="closeMobileMenu()">
+        {{ .Name }}
+      </a>
       {{ end }}
-      <a href="{{ .Site.Params.joinFormURL }}" 
-         target="_blank"
-         class="btn-primary text-center mt-2">
+      <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary text-center mt-2">
         Join the Circle ✨
       </a>
     </div>
@@ -83,7 +80,7 @@
     } else {
       nav.classList.remove('menu-open');
     }
-    
+
     const lines = mobileToggle.querySelectorAll('span');
     if (menuOpen) {
       lines[0].style.transform = 'rotate(45deg) translate(4px, 4px)';

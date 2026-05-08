@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/mentors/anita-krishnan/</loc>
+    <loc>http://localhost:65031/mentors/anita-krishnan/</loc>
   </url><url>
-    <loc>http://localhost:1313/societies/brigade-gateway/</loc>
+    <loc>http://localhost:65031/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:65031/sessions/guitar-basics/</loc>
   </url><url>
-    <loc>http://localhost:1313/sessions/guitar-basics/</loc>
+    <loc>http://localhost:65031/mentors/</loc>
   </url><url>
-    <loc>http://localhost:1313/mentors/</loc>
+    <loc>http://localhost:65031/societies/prestige-lakeside/</loc>
   </url><url>
-    <loc>http://localhost:1313/societies/prestige-lakeside/</loc>
+    <loc>http://localhost:65031/mentors/priya-sharma/</loc>
   </url><url>
-    <loc>http://localhost:1313/mentors/priya-sharma/</loc>
+    <loc>http://localhost:65031/mentors/rahul-menon/</loc>
   </url><url>
-    <loc>http://localhost:1313/mentors/rahul-menon/</loc>
+    <loc>http://localhost:65031/societies/sai-silicon-city/</loc>
   </url><url>
-    <loc>http://localhost:1313/sessions/</loc>
+    <loc>http://localhost:65031/sessions/</loc>
   </url><url>
-    <loc>http://localhost:1313/societies/sobha-dream-acres/</loc>
+    <loc>http://localhost:65031/societies/sobha-dream-acres/</loc>
   </url><url>
-    <loc>http://localhost:1313/societies/</loc>
+    <loc>http://localhost:65031/societies/</loc>
   </url><url>
-    <loc>http://localhost:1313/sessions/swimming-101/</loc>
+    <loc>http://localhost:65031/sessions/swimming-101/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:65031/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:65031/</loc>
   </url><url>
-    <loc>http://localhost:1313/sessions/young-entrepreneurs/</loc>
+    <loc>http://localhost:65031/sessions/young-entrepreneurs/</loc>
   </url>
 </urlset>
