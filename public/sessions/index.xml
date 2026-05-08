@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sessions on Unskooling.day — Real-World Skills, Taught by Neighbors</title>
+    <link>http://localhost:1313/sessions/</link>
+    <description>Recent content in Sessions on Unskooling.day — Real-World Skills, Taught by Neighbors</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/sessions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guitar Basics for Kids</title>
+      <link>http://localhost:1313/sessions/guitar-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sessions/guitar-basics/</guid>
+      <description>&lt;p&gt;Start your musical journey with acoustic guitar! This beginner-friendly course is designed for kids who have never picked up a guitar before.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Swimming for Beginners</title>
+      <link>http://localhost:1313/sessions/swimming-101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sessions/swimming-101/</guid>
+      <description>&lt;p&gt;Build water confidence and learn proper swimming technique in the safety of your own society pool.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-youll-learn&#34;&gt;What You&amp;rsquo;ll Learn&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Water safety and confidence building&lt;/li&gt;&#xA;&lt;li&gt;Freestyle stroke technique&lt;/li&gt;&#xA;&lt;li&gt;Backstroke fundamentals&lt;/li&gt;&#xA;&lt;li&gt;Treading water and endurance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basic comfort in water&lt;/li&gt;&#xA;&lt;li&gt;Swimwear and goggles&lt;/li&gt;&#xA;&lt;li&gt;Parents must be present for children under 8&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Young Entrepreneurs Club</title>
+      <link>http://localhost:1313/sessions/young-entrepreneurs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sessions/young-entrepreneurs/</guid>
+      <description>&lt;p&gt;Ever wondered how businesses start? This session series takes kids through the journey of creating their own mini-business right in the society.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

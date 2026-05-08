@@ -1,0 +1,104 @@
+<nav id="main-nav" class="nav-sticky py-4 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group" id="nav-logo">
+      <span class="text-3xl">🌻</span>
+      <span class="font-display text-xl font-bold text-deep group-hover:text-brand-orange transition-colors">
+        unskooling<span class="text-brand-orange">.day</span>
+      </span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex items-center gap-8">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" 
+           class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
+           id="nav-{{ anchorize .Name }}">
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </div>
+
+    <!-- CTA + Mobile Toggle -->
+    <div class="flex items-center gap-4">
+      <a href="{{ .Site.Params.joinFormURL }}" 
+         target="_blank"
+         class="btn-primary text-sm hidden sm:inline-flex animate-pulse-glow"
+         id="nav-join-cta">
+        Join the Circle ✨
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-toggle" 
+              class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-warm-100 transition-colors"
+              aria-label="Toggle menu">
+        <span class="w-6 h-0.5 bg-deep rounded-full transition-all" id="burger-line-1"></span>
+        <span class="w-6 h-0.5 bg-deep rounded-full transition-all" id="burger-line-2"></span>
+        <span class="w-4 h-0.5 bg-deep rounded-full transition-all" id="burger-line-3"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="md:hidden hidden">
+    <div class="mt-4 pb-4 border-t border-warm-200 pt-4 flex flex-col gap-4">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" 
+           class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+           onclick="closeMobileMenu()">
+          {{ .Name }}
+        </a>
+      {{ end }}
+      <a href="{{ .Site.Params.joinFormURL }}" 
+         target="_blank"
+         class="btn-primary text-center mt-2">
+        Join the Circle ✨
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Sticky nav scroll effect
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  mobileToggle.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('hidden');
+    
+    const lines = mobileToggle.querySelectorAll('span');
+    if (menuOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(2px, -2px)';
+      lines[2].style.width = '1.5rem';
+    } else {
+      lines[0].style.transform = '';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = '';
+      lines[2].style.width = '1rem';
+    }
+  });
+
+  function closeMobileMenu() {
+    menuOpen = false;
+    mobileMenu.classList.add('hidden');
+    const lines = mobileToggle.querySelectorAll('span');
+    lines[0].style.transform = '';
+    lines[1].style.opacity = '1';
+    lines[2].style.transform = '';
+    lines[2].style.width = '1rem';
+  }
+</script>

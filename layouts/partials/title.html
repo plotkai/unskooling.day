@@ -1,9 +1,0 @@
-{{ if .Title }}
-<hgroup>
-  {{/* <h1>{{ .Title }}</h1> */}}
-  <img src="/logo-z.png" alt="{{ .Title }}" style="max-width: 300px; margin: 0 auto; display: block;" />
-  {{ with .Params.Description }}
-  <p>{{ . | markdownify }}</p>
-  {{ end }}
-</hgroup>
-{{ end }}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article class="pt-28 pb-20 px-6 lg:px-12">
+  <div class="max-w-3xl mx-auto">
+    <a href="/sessions/" class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-block">← Back to Sessions</a>
+
+    {{ with .Params.image }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-64 object-cover rounded-2xl mb-8">
+    {{ end }}
+
+    <div class="flex items-center gap-2 mb-4">
+      <span class="badge badge-{{ .Params.category | lower }}">{{ .Params.category }}</span>
+      <span class="badge {{ if eq .Params.status "Active" }}badge-active{{ else }}badge-upcoming{{ end }}">{{ .Params.status }}</span>
+    </div>
+
+    <h1 class="font-display text-3xl md:text-4xl font-bold mb-4">{{ .Title }}</h1>
+    <p class="text-deep/60 text-lg mb-6">{{ .Params.description }}</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="glass-card p-4 text-center">
+        <div class="text-xl mb-1">💰</div>
+        <div class="text-sm font-bold">{{ .Params.price_model }}</div>
+      </div>
+      <div class="glass-card p-4 text-center">
+        <div class="text-xl mb-1">📅</div>
+        <div class="text-sm font-bold">{{ .Params.schedule }}</div>
+      </div>
+      <div class="glass-card p-4 text-center">
+        <div class="text-xl mb-1">📍</div>
+        <div class="text-sm font-bold">{{ .Params.society }}</div>
+      </div>
+      <div class="glass-card p-4 text-center">
+        <div class="text-xl mb-1">👤</div>
+        <div class="text-sm font-bold">{{ .Params.mentor }}</div>
+      </div>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
+      {{ .Content }}
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary text-lg">
+        Join This Session ✨
+      </a>
+    </div>
+  </div>
+</article>
+{{ end }}

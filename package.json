@@ -1,7 +1,26 @@
 {
-  "private": "true",
+  "name": "unskooling.day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "hugo --gc --minify",
-    "dev": "hugo server"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plotkai/unskooling.day.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/plotkai/unskooling.day/issues"
+  },
+  "homepage": "https://github.com/plotkai/unskooling.day#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "@tailwindcss/typography": "^0.5.19",
+    "tailwindcss": "^4.2.4"
   }
 }

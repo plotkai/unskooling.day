@@ -1,4 +1,57 @@
 baseURL = 'https://unskooling.day/'
-locale = 'en-us'
-title = 'Unskooling Day'
-theme = 'gallery'
+defaultContentLanguage = 'en'
+title = 'Unskooling.day — Real-World Skills, Taught by Neighbors'
+summaryLength = 20
+
+[params]
+  tagline = "Real-world skills, taught by neighbors, in your community hall."
+  description = "A community-based experiential learning platform connecting kids in Bangalore's gated communities with passionate neighbor-mentors."
+  joinFormURL = "https://forms.gle/ZZxzmyht9kSb8Zv46"
+  societyFormURL = "https://forms.gle/hL4BetHe43yCFm1c8"
+  mentorFormURL = "https://forms.gle/4YHumKyhqc3r6paeA"
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'
+
+[security]
+  [security.exec]
+    allow = ['^(npx|node|tailwindcss)$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|GOPATH|HOME|LOCALAPPDATA|TEMP|TMP|UserProfile|npm_config_.*)$']
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[menus]
+  [[menus.main]]
+    name = 'How It Works'
+    url = '#how-it-works'
+    weight = 1
+  [[menus.main]]
+    name = 'Sessions'
+    url = '#sessions'
+    weight = 2
+  [[menus.main]]
+    name = 'Mentors'
+    url = '#mentors'
+    weight = 3
+  [[menus.main]]
+    name = 'Societies'
+    url = '#societies'
+    weight = 4

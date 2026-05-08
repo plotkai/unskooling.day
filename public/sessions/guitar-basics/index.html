@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <title>Guitar Basics for Kids — Unskooling.day — Real-World Skills, Taught by Neighbors</title>
+  <meta name="description"
+    content="Learn acoustic guitar from scratch! Perfect for beginners aged 8-14. We cover chords, strumming patterns, and your first song within 4 sessions.">
+  <meta name="author" content="Unskooling.day">
+  <link rel="canonical" href="http://localhost:1313/sessions/guitar-basics/">
+
+
+  <meta property="og:title" content="Guitar Basics for Kids">
+  <meta property="og:description"
+    content="Learn acoustic guitar from scratch! Perfect for beginners aged 8-14. We cover chords, strumming patterns, and your first song within 4 sessions.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:1313/sessions/guitar-basics/">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Unskooling.day">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guitar Basics for Kids">
+  <meta name="twitter:description"
+    content="Learn acoustic guitar from scratch! Perfect for beginners aged 8-14. We cover chords, strumming patterns, and your first song within 4 sessions.">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+</head>
+
+<body class="bg-warm-white text-deep antialiased overflow-x-hidden">
+  <nav id="main-nav" class="nav-sticky py-4 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <a href="/" class="flex items-center gap-2 group" id="nav-logo">
+        <span class="text-3xl">🌻</span>
+        <span class="font-display text-xl font-bold text-deep group-hover:text-brand-orange transition-colors">
+          unskooling<span class="text-brand-orange">.day</span>
+        </span>
+      </a>
+
+
+      <div class="hidden md:flex items-center gap-8">
+
+        <a href="#how-it-works"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
+          id="nav-how-it-works">
+          How It Works
+        </a>
+
+        <a href="#sessions"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
+          id="nav-sessions">
+          Sessions
+        </a>
+
+        <a href="#mentors"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
+          id="nav-mentors">
+          Mentors
+        </a>
+
+        <a href="#societies"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
+          id="nav-societies">
+          Societies
+        </a>
+
+      </div>
+
+
+      <div class="flex items-center gap-4">
+        <a href="https://forms.gle/ZZxzmyht9kSb8Zv46" target="_blank"
+          class="btn-primary text-sm hidden sm:inline-flex animate-pulse-glow" id="nav-join-cta">
+          Join the Circle ✨
+        </a>
+
+
+        <button id="mobile-menu-toggle"
+          class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-warm-100 transition-colors"
+          aria-label="Toggle menu">
+          <span class="w-6 h-0.5 bg-deep rounded-full transition-all" id="burger-line-1"></span>
+          <span class="w-6 h-0.5 bg-deep rounded-full transition-all" id="burger-line-2"></span>
+          <span class="w-4 h-0.5 bg-deep rounded-full transition-all" id="burger-line-3"></span>
+        </button>
+      </div>
+    </div>
+
+
+    <div id="mobile-menu" class="md:hidden hidden">
+      <div class="mt-4 pb-4 border-t border-warm-200 pt-4 flex flex-col gap-4">
+
+        <a href="#how-it-works"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+          onclick="closeMobileMenu()">
+          How It Works
+        </a>
+
+        <a href="#sessions"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+          onclick="closeMobileMenu()">
+          Sessions
+        </a>
+
+        <a href="#mentors"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+          onclick="closeMobileMenu()">
+          Mentors
+        </a>
+
+        <a href="#societies"
+          class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+          onclick="closeMobileMenu()">
+          Societies
+        </a>
+
+        <a href="https://forms.gle/ZZxzmyht9kSb8Zv46" target="_blank" class="btn-primary text-center mt-2">
+          Join the Circle ✨
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+
+    mobileToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('hidden');
+
+      const lines = mobileToggle.querySelectorAll('span');
+      if (menuOpen) {
+        lines[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(2px, -2px)';
+        lines[2].style.width = '1.5rem';
+      } else {
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = '';
+        lines[2].style.width = '1rem';
+      }
+    });
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.add('hidden');
+      const lines = mobileToggle.querySelectorAll('span');
+      lines[0].style.transform = '';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = '';
+      lines[2].style.width = '1rem';
+    }
+  </script>
+
+
+  <main>
+
+    <article class="pt-28 pb-20 px-6 lg:px-12">
+      <div class="max-w-3xl mx-auto">
+        <a href="/sessions/"
+          class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-block">← Back to
+          Sessions</a>
+
+
+        <img src="/images/sessions/guitar.webp" alt="Guitar Basics for Kids"
+          class="w-full h-64 object-cover rounded-2xl mb-8">
+
+
+        <div class="flex items-center gap-2 mb-4">
+          <span class="badge badge-music">Music</span>
+          <span class="badge badge-active">Active</span>
+        </div>
+
+        <h1 class="font-display text-3xl md:text-4xl font-bold mb-4">Guitar Basics for Kids</h1>
+        <p class="text-deep/60 text-lg mb-6">Learn acoustic guitar from scratch! Perfect for beginners aged 8-14. We
+          cover chords, strumming patterns, and your first song within 4 sessions.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="glass-card p-4 text-center">
+            <div class="text-xl mb-1">💰</div>
+            <div class="text-sm font-bold">₹500/session</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-xl mb-1">📅</div>
+            <div class="text-sm font-bold">Saturdays, 10 AM</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-xl mb-1">📍</div>
+            <div class="text-sm font-bold">Prestige Lakeside Habitat</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-xl mb-1">👤</div>
+            <div class="text-sm font-bold">priya-sharma</div>
+          </div>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <p>Start your musical journey with acoustic guitar! This beginner-friendly course is designed for kids who
+            have never picked up a guitar before.</p>
+          <h2 id="what-youll-learn">What You&rsquo;ll Learn</h2>
+          <ul>
+            <li>Basic chord shapes (C, G, Am, Em)</li>
+            <li>Strumming patterns for popular songs</li>
+            <li>Reading simple tablature</li>
+            <li>Your first complete song by session 4!</li>
+          </ul>
+          <h2 id="what-to-bring">What to Bring</h2>
+          <ul>
+            <li>A guitar (we have 2 loaners available)</li>
+            <li>A notebook for practice notes</li>
+            <li>Enthusiasm! 🎸</li>
+          </ul>
+
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="https://forms.gle/ZZxzmyht9kSb8Zv46" target="_blank" class="btn-primary text-lg">
+            Join This Session ✨
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="bg-deep text-white/80 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl">🌻</span>
+            <span class="font-display text-xl font-bold text-white">
+              unskooling<span class="text-brand-orange">.day</span>
+            </span>
+          </div>
+          <p class="text-white/60 leading-relaxed text-sm">
+            A community-based experiential learning platform connecting kids in Bangalore's gated communities with
+            passionate neighbor-mentors.
+          </p>
+        </div>
+
+
+        <div>
+          <h4 class="font-display font-bold text-white mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#how-it-works" class="text-white/60 hover:text-brand-orange transition-colors text-sm">How It
+                Works</a></li>
+            <li><a href="#sessions" class="text-white/60 hover:text-brand-orange transition-colors text-sm">Browse
+                Sessions</a></li>
+            <li><a href="#mentors" class="text-white/60 hover:text-brand-orange transition-colors text-sm">Meet
+                Mentors</a></li>
+            <li><a href="https://forms.gle/4YHumKyhqc3r6paeA" target="_blank"
+                class="text-white/60 hover:text-brand-orange transition-colors text-sm">Become a Mentor</a></li>
+            <li><a href="https://forms.gle/hL4BetHe43yCFm1c8" target="_blank"
+                class="text-white/60 hover:text-brand-orange transition-colors text-sm">Bring to Your Society</a></li>
+          </ul>
+        </div>
+
+
+        <div>
+          <h4 class="font-display font-bold text-white mb-4 text-sm uppercase tracking-wider">Get Started</h4>
+          <p class="text-white/60 text-sm mb-4">
+            Ready to unlock your child's potential through real-world learning?
+          </p>
+          <a href="https://forms.gle/ZZxzmyht9kSb8Zv46" target="_blank" class="btn-primary text-sm"
+            id="footer-join-cta">
+            Join the Circle ✨
+          </a>
+          <div class="mt-6 flex items-center gap-2 text-white/40 text-xs">
+            <span>📍</span>
+            <span>Bangalore, India</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-white/40 text-xs">
+          © 2026 Unskooling.day. Made with ❤️ in India.
+        </p>
+        <p class="text-white/30 text-xs">
+          Empowering curious minds, one community at a time.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
+</html>

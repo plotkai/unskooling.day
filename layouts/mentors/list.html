@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="pt-28 pb-20 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="font-display text-4xl font-bold mb-4">{{ .Title }}</h1>
+    <p class="text-deep/60 mb-10 max-w-xl">{{ .Params.description }}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range .Pages }}
+      <div class="mentor-card">
+        {{ with .Params.photo }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="mentor-photo">
+        {{ else }}
+        <div class="w-full h-56 bg-gradient-to-br from-brand-indigo/10 to-brand-orange/10 flex items-center justify-center text-5xl">👤</div>
+        {{ end }}
+        <div class="p-6">
+          <h2 class="font-display text-lg font-bold mb-1">
+            <a href="{{ .Permalink }}" class="hover:text-brand-orange transition-colors">{{ .Title }}</a>
+          </h2>
+          <p class="text-brand-indigo text-sm font-semibold mb-3">{{ .Params.skill }}</p>
+          <p class="text-deep/60 text-sm mb-4 line-clamp-3">{{ .Params.bio }}</p>
+          <span class="text-deep/40 text-xs">📍 {{ .Params.society }}</span>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

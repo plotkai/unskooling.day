@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Societies on Unskooling.day — Real-World Skills, Taught by Neighbors</title>
+    <link>http://localhost:1313/societies/</link>
+    <description>Recent content in Societies on Unskooling.day — Real-World Skills, Taught by Neighbors</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/societies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brigade Gateway</title>
+      <link>http://localhost:1313/societies/brigade-gateway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/societies/brigade-gateway/</guid>
+      <description>&lt;p&gt;Brigade Gateway&amp;rsquo;s excellent sports facilities, including a large pool and multi-purpose hall, make it perfect for diverse learning sessions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prestige Lakeside Habitat</title>
+      <link>http://localhost:1313/societies/prestige-lakeside/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/societies/prestige-lakeside/</guid>
+      <description>&lt;p&gt;Prestige Lakeside Habitat was one of the first communities to adopt Unskooling. With an active RWA and a beautiful clubhouse, sessions here run every weekend.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sobha Dream Acres</title>
+      <link>http://localhost:1313/societies/sobha-dream-acres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/societies/sobha-dream-acres/</guid>
+      <description>&lt;p&gt;With one of the largest resident populations in East Bangalore, Sobha Dream Acres is gearing up to launch its first Unskooling sessions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
