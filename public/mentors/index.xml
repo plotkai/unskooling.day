@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mentors on Unskooling.day — Real-World Skills, Taught by Neighbors</title>
+    <link>http://localhost:1313/mentors/</link>
+    <description>Recent content in Mentors on Unskooling.day — Real-World Skills, Taught by Neighbors</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/mentors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anita Krishnan</title>
+      <link>http://localhost:1313/mentors/anita-krishnan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mentors/anita-krishnan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Priya Sharma</title>
+      <link>http://localhost:1313/mentors/priya-sharma/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mentors/priya-sharma/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rahul Menon</title>
+      <link>http://localhost:1313/mentors/rahul-menon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mentors/rahul-menon/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

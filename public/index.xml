@@ -1,54 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Unskooling Day on </title>
+    <title>Unskooling.day — Real-World Skills, Taught by Neighbors</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Unskooling Day on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>bunk@unskooling.day (Plotkai Interactive)</managingEditor>
-    <webMaster>bunk@unskooling.day (Plotkai Interactive)</webMaster>
-    <copyright>© Plotkai Interactive</copyright>
-    <lastBuildDate>Sat, 01 Apr 2023 00:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content on Unskooling.day — Real-World Skills, Taught by Neighbors</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Young Explorers</title>
-      <link>http://localhost:1313/young-explorers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/young-explorers/</guid>
-        <media:content url="http://localhost:1313/young-explorers/jingle-makers_hu_9e48709600feda6e.png" type="image/jpeg"/>
-        <description>
-          &lt;img src=&quot;http://localhost:1313/young-explorers/jingle-makers_hu_9e48709600feda6e.png&quot; /&gt;
-          &lt;p&gt;Fashion are a powerful form of self-expression. This category documents style through inspiring shots of street fashion, skincare products, avant-garde editorial photographs, and more.&lt;/p&gt;
-        </description></item>
+      <title>Anita Krishnan</title>
+      <link>http://localhost:1313/mentors/anita-krishnan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mentors/anita-krishnan/</guid>
+      <description></description>
+    </item>
     <item>
-      <title>Pro Kids</title>
-      <link>http://localhost:1313/pro-kids/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/pro-kids/</guid>
-        <media:content url="http://localhost:1313/pro-kids/startup_hu_481aac143513e94b.png" type="image/jpeg"/>
-        <description>
-          &lt;img src=&quot;http://localhost:1313/pro-kids/startup_hu_481aac143513e94b.png&quot; /&gt;
-          &lt;p&gt;Through photography, the beauty of Mother Nature can be frozen in time. This category celebrates the magic of our planet and beyond — from the immensity of the great outdoors, to miraculous moments in your own backyard.&lt;/p&gt;
-        </description></item>
+      <title>Brigade Gateway</title>
+      <link>http://localhost:1313/societies/brigade-gateway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/societies/brigade-gateway/</guid>
+      <description>&lt;p&gt;Brigade Gateway&amp;rsquo;s excellent sports facilities, including a large pool and multi-purpose hall, make it perfect for diverse learning sessions.&lt;/p&gt;</description>
+    </item>
     <item>
-      <title>Indoor</title>
-      <link>http://localhost:1313/toddlers/indoor/</link>
-      <pubDate>Sat, 01 Apr 2023 00:00:00 +0530</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/toddlers/indoor/</guid>
-        <media:content url="http://localhost:1313/toddlers/indoor/rhythm-and-paint_hu_8908312831f2c19e.png" type="image/jpeg"/>
-        <description>
-          &lt;img src=&quot;http://localhost:1313/toddlers/indoor/rhythm-and-paint_hu_8908312831f2c19e.png&quot; /&gt;
-          &lt;p&gt;&lt;no value&gt;&lt;/p&gt;
-        </description></item>
+      <title>Guitar Basics for Kids</title>
+      <link>http://localhost:1313/sessions/guitar-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sessions/guitar-basics/</guid>
+      <description>&lt;p&gt;Start your musical journey with acoustic guitar! This beginner-friendly course is designed for kids who have never picked up a guitar before.&lt;/p&gt;</description>
+    </item>
     <item>
-      <title>Outdoors</title>
-      <link>http://localhost:1313/toddlers/outdoors/</link>
-      <pubDate>Thu, 12 Jan 2023 00:00:00 +0530</pubDate><author>bunk@unskooling.day (Plotkai Interactive)</author>
-      <guid>http://localhost:1313/toddlers/outdoors/</guid>
-        <media:content url="http://localhost:1313/toddlers/outdoors/nature-scouts_hu_ae3801880da28b17.png" type="image/jpeg"/>
-        <description>
-          &lt;img src=&quot;http://localhost:1313/toddlers/outdoors/nature-scouts_hu_ae3801880da28b17.png&quot; /&gt;
-          &lt;p&gt;&lt;no value&gt;&lt;/p&gt;
-        </description></item>
+      <title>Prestige Lakeside Habitat</title>
+      <link>http://localhost:1313/societies/prestige-lakeside/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/societies/prestige-lakeside/</guid>
+      <description>&lt;p&gt;Prestige Lakeside Habitat was one of the first communities to adopt Unskooling. With an active RWA and a beautiful clubhouse, sessions here run every weekend.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Priya Sharma</title>
+      <link>http://localhost:1313/mentors/priya-sharma/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mentors/priya-sharma/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rahul Menon</title>
+      <link>http://localhost:1313/mentors/rahul-menon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mentors/rahul-menon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sobha Dream Acres</title>
+      <link>http://localhost:1313/societies/sobha-dream-acres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/societies/sobha-dream-acres/</guid>
+      <description>&lt;p&gt;With one of the largest resident populations in East Bangalore, Sobha Dream Acres is gearing up to launch its first Unskooling sessions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Swimming for Beginners</title>
+      <link>http://localhost:1313/sessions/swimming-101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sessions/swimming-101/</guid>
+      <description>&lt;p&gt;Build water confidence and learn proper swimming technique in the safety of your own society pool.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-youll-learn&#34;&gt;What You&amp;rsquo;ll Learn&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Water safety and confidence building&lt;/li&gt;&#xA;&lt;li&gt;Freestyle stroke technique&lt;/li&gt;&#xA;&lt;li&gt;Backstroke fundamentals&lt;/li&gt;&#xA;&lt;li&gt;Treading water and endurance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basic comfort in water&lt;/li&gt;&#xA;&lt;li&gt;Swimwear and goggles&lt;/li&gt;&#xA;&lt;li&gt;Parents must be present for children under 8&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Young Entrepreneurs Club</title>
+      <link>http://localhost:1313/sessions/young-entrepreneurs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sessions/young-entrepreneurs/</guid>
+      <description>&lt;p&gt;Ever wondered how businesses start? This session series takes kids through the journey of creating their own mini-business right in the society.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

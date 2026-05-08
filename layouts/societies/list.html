@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="pt-28 pb-20 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="font-display text-4xl font-bold mb-4">{{ .Title }}</h1>
+    <p class="text-deep/60 mb-10 max-w-xl">{{ .Params.description }}</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {{ range .Pages }}
+      <div class="glass-card p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-orange/20 to-brand-indigo/20 flex items-center justify-center text-xl">🏘️</div>
+          <div>
+            <h2 class="font-display font-bold">{{ .Title }}</h2>
+            <p class="text-deep/50 text-sm">{{ .Params.location }}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-sm text-deep/60 mb-4">
+          <span class="badge {{ if eq .Params.status "Active" }}badge-active{{ else }}badge-upcoming{{ end }}">{{ .Params.status }}</span>
+          <span>{{ .Params.resident_count }}</span>
+        </div>
+        <div class="text-deep/60 text-sm">{{ .Content }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
