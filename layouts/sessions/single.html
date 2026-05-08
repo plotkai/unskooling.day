@@ -1,46 +1,165 @@
 {{ define "main" }}
 <article class="pt-28 pb-20 px-6 lg:px-12">
-  <div class="max-w-3xl mx-auto">
-    <a href="/sessions/" class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-block">← Back to Sessions</a>
+  <div class="max-w-5xl mx-auto">
+    <a href="/sessions/"
+      class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-flex items-center gap-1">
+      ← All Sessions
+    </a>
 
+    <!-- Hero Banner -->
     {{ with .Params.image }}
-    <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-64 object-cover rounded-2xl mb-8">
+    <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+      <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-64 md:h-80 object-cover">
+    </div>
     {{ end }}
 
-    <div class="flex items-center gap-2 mb-4">
+    <div class="flex flex-wrap items-center gap-3 mb-4">
       <span class="badge badge-{{ .Params.category | lower }}">{{ .Params.category }}</span>
-      <span class="badge {{ if eq .Params.status "Active" }}badge-active{{ else }}badge-upcoming{{ end }}">{{ .Params.status }}</span>
+      <span class="badge {{ if eq .Params.status " Active" }}badge-active{{ else }}badge-upcoming{{ end }}">{{
+        .Params.status }}</span>
     </div>
 
     <h1 class="font-display text-3xl md:text-4xl font-bold mb-4">{{ .Title }}</h1>
-    <p class="text-deep/60 text-lg mb-6">{{ .Params.description }}</p>
+    <p class="text-deep/60 text-lg mb-8 max-w-3xl">{{ .Params.description }}</p>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-      <div class="glass-card p-4 text-center">
-        <div class="text-xl mb-1">💰</div>
-        <div class="text-sm font-bold">{{ .Params.price_model }}</div>
+    <!-- Quick Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      {{ with .Params.price_model }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">💰</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Cost</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
       </div>
-      <div class="glass-card p-4 text-center">
-        <div class="text-xl mb-1">📅</div>
-        <div class="text-sm font-bold">{{ .Params.schedule }}</div>
+      {{ end }}
+      {{ with .Params.schedule }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">📅</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Schedule</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
       </div>
-      <div class="glass-card p-4 text-center">
-        <div class="text-xl mb-1">📍</div>
-        <div class="text-sm font-bold">{{ .Params.society }}</div>
+      {{ end }}
+      {{ with .Params.min_students }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">👥</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Min. Students</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
       </div>
-      <div class="glass-card p-4 text-center">
-        <div class="text-xl mb-1">👤</div>
-        <div class="text-sm font-bold">{{ .Params.mentor }}</div>
+      {{ end }}
+      {{ with .Params.age_group }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">🎯</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Age Group</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
       </div>
+      {{ end }}
     </div>
 
-    <div class="prose prose-lg max-w-none">
+    <!-- Learning Structure -->
+    {{ with .Params.learning_structure }}
+    <div class="glass-card p-8 mb-10">
+      <h2 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
+        📐 Learning Structure
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {{ with .duration }}
+        <div class="flex items-start gap-3">
+          <span class="text-brand-orange text-lg mt-0.5">⏱️</span>
+          <div>
+            <div class="text-sm font-bold text-deep">Duration</div>
+            <div class="text-sm text-deep/60">{{ . }}</div>
+          </div>
+        </div>
+        {{ end }}
+        {{ with .sessions_count }}
+        <div class="flex items-start gap-3">
+          <span class="text-brand-orange text-lg mt-0.5">📚</span>
+          <div>
+            <div class="text-sm font-bold text-deep">Total Sessions</div>
+            <div class="text-sm text-deep/60">{{ . }}</div>
+          </div>
+        </div>
+        {{ end }}
+        {{ with .difficulty }}
+        <div class="flex items-start gap-3">
+          <span class="text-brand-orange text-lg mt-0.5">📊</span>
+          <div>
+            <div class="text-sm font-bold text-deep">Difficulty</div>
+            <div class="text-sm text-deep/60">{{ . }}</div>
+          </div>
+        </div>
+        {{ end }}
+        {{ with .materials }}
+        <div class="flex items-start gap-3">
+          <span class="text-brand-orange text-lg mt-0.5">🎒</span>
+          <div>
+            <div class="text-sm font-bold text-deep">Materials Needed</div>
+            <div class="text-sm text-deep/60">{{ . }}</div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Content body (from markdown) -->
+    {{ if .Content }}
+    <div class="prose prose-lg max-w-none mb-10 prose-headings:font-display prose-a:text-brand-orange">
       {{ .Content }}
     </div>
+    {{ end }}
 
-    <div class="mt-10 text-center">
-      <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary text-lg">
-        Join This Session ✨
+    <!-- Gallery -->
+    {{ with .Params.gallery }}
+    <div class="mb-10">
+      <h2 class="font-display text-xl font-bold mb-6 flex items-center gap-2">
+        📸 Gallery
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {{ range . }}
+        <div class="gallery-item aspect-[4/3]">
+          <img src="{{ . }}" alt="Session gallery" loading="lazy">
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Available Mentors for this category -->
+    <!-- {{ $category := .Params.category }}
+    {{ $mentors := where (where .Site.RegularPages "Section" "mentors") ".Params.skill" "intersect" (slice $category) }}
+    {{ if not $mentors }}
+      {{ $mentors = where .Site.RegularPages "Section" "mentors" }}
+    {{ end }}
+    {{ if $mentors }}
+    <div class="mb-10">
+      <h2 class="font-display text-xl font-bold mb-6 flex items-center gap-2">
+        🧑‍🏫 Available Mentors
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {{ range $mentors }}
+        <a href="{{ .Permalink }}" class="glass-card p-4 flex items-center gap-4 group">
+          {{ with .Params.photo }}
+          <img src="{{ . }}" alt="{{ $.Title }}" class="w-14 h-14 rounded-full object-cover flex-shrink-0">
+          {{ else }}
+          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-indigo/10 to-brand-orange/10 flex items-center justify-center text-2xl flex-shrink-0">👤</div>
+          {{ end }}
+          <div>
+            <div class="font-display font-bold text-sm group-hover:text-brand-orange transition-colors">{{ .Title }}</div>
+            <div class="text-deep/50 text-xs">{{ .Params.skill }}</div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }} -->
+
+    <!-- CTA -->
+    <div class="text-center glass-card p-10">
+      <h3 class="font-display text-xl font-bold mb-3">Interested in {{ .Title }}?</h3>
+      <p class="text-deep/60 text-sm mb-6 max-w-md mx-auto">Sign up to get notified when this session is available in
+        your society.</p>
+      <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary">
+        Join the Circle ✨
       </a>
     </div>
   </div>

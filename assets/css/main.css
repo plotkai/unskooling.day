@@ -199,8 +199,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-.nav-sticky.scrolled {
-  background: rgba(255, 251, 245, 0.92);
+.nav-sticky.scrolled,
+.nav-sticky.menu-open {
+  background: rgba(255, 251, 245, 0.95);
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 20px rgba(30, 27, 46, 0.08);
 }

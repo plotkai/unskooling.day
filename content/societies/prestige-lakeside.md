@@ -1,7 +1,7 @@
 ---
 title: "Prestige Lakeside Habitat"
 location: "Varthur, East Bangalore"
-status: "Active"
+status: "Upcoming"
 resident_count: "2000+ families"
 ---
 

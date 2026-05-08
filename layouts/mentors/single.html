@@ -1,29 +1,117 @@
 {{ define "main" }}
 <article class="pt-28 pb-20 px-6 lg:px-12">
-  <div class="max-w-3xl mx-auto">
-    <a href="/mentors/" class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-block">← Back to Mentors</a>
+  <div class="max-w-4xl mx-auto">
+    <a href="/mentors/"
+      class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-flex items-center gap-1">
+      ← All Mentors
+    </a>
 
-    <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
-      {{ with .Params.photo }}
-      <img src="{{ . }}" alt="{{ $.Title }}" class="w-40 h-40 rounded-2xl object-cover shadow-lg">
-      {{ end }}
-      <div>
-        <h1 class="font-display text-3xl font-bold mb-2">{{ .Title }}</h1>
-        <p class="text-brand-indigo font-semibold mb-2">{{ .Params.skill }}</p>
-        <div class="flex items-center gap-4 text-sm text-deep/50">
-          <span>📍 {{ .Params.society }}</span>
-          <span>🎓 {{ .Params.experience }}</span>
+    <!-- Profile Header -->
+    <div class="glass-card p-8 md:p-10 mb-10">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        {{ with .Params.photo }}
+        <img src="{{ . }}" alt="{{ $.Title }}"
+          class="w-36 h-36 md:w-44 md:h-44 rounded-2xl object-cover shadow-lg flex-shrink-0">
+        {{ else }}
+        <div
+          class="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-brand-indigo/10 to-brand-orange/10 flex items-center justify-center text-6xl flex-shrink-0">
+          👤</div>
+        {{ end }}
+        <div class="flex-1">
+          <h1 class="font-display text-3xl md:text-4xl font-bold mb-2">{{ .Title }}</h1>
+          <p class="text-brand-indigo font-semibold text-lg mb-4">{{ .Params.skill }}</p>
+          <p class="text-deep/60 leading-relaxed mb-6">{{ .Params.bio }}</p>
+          <!-- <div class="flex flex-wrap gap-4">
+            <a href="{{ .Site.Params.mentorFormURL }}" target="_blank" class="btn-primary text-sm">
+              Express Interest ✨
+            </a>
+          </div> -->
         </div>
       </div>
     </div>
 
-    <div class="glass-card p-8 mb-8">
-      <p class="text-deep/70 leading-relaxed">{{ .Params.bio }}</p>
+    <!-- Details Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      {{ with .Params.experience }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">🎓</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Experience</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
+      </div>
+      {{ end }}
+      {{ with .Params.hosting_experience }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">🏠</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Sessions Hosted</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
+      </div>
+      {{ end }}
+      {{ with .Params.students_taught }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">👥</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Students Taught</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
+      </div>
+      {{ end }}
+      {{ with .Params.society }}
+      <div class="glass-card p-5 text-center">
+        <div class="text-2xl mb-2">📍</div>
+        <div class="text-xs text-deep/50 uppercase tracking-wider mb-1">Society</div>
+        <div class="text-sm font-display font-bold">{{ . }}</div>
+      </div>
+      {{ end }}
     </div>
 
-    <div class="text-center">
-      <a href="{{ .Site.Params.mentorFormURL }}" target="_blank" class="btn-primary">
-        Express Interest in {{ .Title }}'s Sessions ✨
+    <!-- Certifications -->
+    {{ with .Params.certifications }}
+    <div class="glass-card p-8 mb-10">
+      <h2 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
+        📜 Certifications & Credentials
+      </h2>
+      <ul class="space-y-3">
+        {{ range . }}
+        <li class="flex items-start gap-3">
+          <span class="text-trust-green mt-0.5">✓</span>
+          <span class="text-deep/70 text-sm">{{ . }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    <!-- Specialties -->
+    {{ with .Params.specialties }}
+    <div class="glass-card p-8 mb-10">
+      <h2 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
+        ⭐ Specialties
+      </h2>
+      <div class="flex flex-wrap gap-2">
+        {{ range . }}
+        <span class="badge bg-brand-indigo/10 text-brand-indigo">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Teaching Philosophy / Content body -->
+    {{ if .Content }}
+    <div class="glass-card p-8 mb-10">
+      <h2 class="font-display text-xl font-bold mb-4 flex items-center gap-2">
+        💭 Teaching Philosophy
+      </h2>
+      <div class="prose prose-sm max-w-none prose-headings:font-display prose-a:text-brand-orange text-deep/70">
+        {{ .Content }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- CTA -->
+    <div class="text-center glass-card p-10">
+      <h3 class="font-display text-xl font-bold mb-3">Want to learn from {{ .Title }}?</h3>
+      <p class="text-deep/60 text-sm mb-6 max-w-md mx-auto">Express your interest and we'll connect you when sessions
+        are available in your society.</p>
+      <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary">
+        Join the Circle ✨
       </a>
     </div>
   </div>

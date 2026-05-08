@@ -20,10 +20,10 @@
     </div>
 
     <!-- CTA + Mobile Toggle -->
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-3 sm:gap-4">
       <a href="{{ .Site.Params.joinFormURL }}" 
          target="_blank"
-         class="btn-primary text-sm hidden sm:inline-flex animate-pulse-glow"
+         class="btn-primary !py-2 !px-3 !text-xs sm:!py-3 sm:!px-6 sm:!text-sm animate-pulse-glow"
          id="nav-join-cta">
         Join the Circle ✨
       </a>
@@ -77,6 +77,12 @@
   mobileToggle.addEventListener('click', () => {
     menuOpen = !menuOpen;
     mobileMenu.classList.toggle('hidden');
+    // Force solid background when menu is open (even without scroll)
+    if (menuOpen) {
+      nav.classList.add('menu-open');
+    } else {
+      nav.classList.remove('menu-open');
+    }
     
     const lines = mobileToggle.querySelectorAll('span');
     if (menuOpen) {
@@ -95,6 +101,7 @@
   function closeMobileMenu() {
     menuOpen = false;
     mobileMenu.classList.add('hidden');
+    nav.classList.remove('menu-open');
     const lines = mobileToggle.querySelectorAll('span');
     lines[0].style.transform = '';
     lines[1].style.opacity = '1';
