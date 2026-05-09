@@ -10,10 +10,14 @@
 
     <!-- Desktop Nav Links -->
     <div class="hidden md:flex items-center gap-8">
+      {{ $section := .Section }}
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}"
-        class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem]"
-        id="nav-{{ anchorize .Name }}">
+      {{ $linkUrl := .URL }}
+      {{ if $section }}{{ $linkUrl = printf "/%s%s" $section .URL }}{{ end }}
+      <a href="{{ $linkUrl }}"
+        class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-[0.9375rem] nav-menu-link"
+        id="nav-{{ anchorize .Name }}"
+        data-base-url="{{ .URL }}">
         {{ .Name }}
       </a>
       {{ end }}
@@ -21,11 +25,11 @@
 
     <!-- CTA + Mobile Toggle -->
     <div class="flex items-center gap-3 sm:gap-4">
-      <div class="flex items-center gap-1.5 text-deep/70 font-medium text-sm bg-warm-100/50 py-1.5 px-3 rounded-full border border-warm-200" id="nav-location">
+      <button onclick="openCityModal()" class="flex items-center gap-1.5 text-deep/70 hover:text-brand-orange hover:bg-warm-100 transition-all font-medium text-sm bg-warm-100/50 py-1.5 px-3 rounded-full border border-warm-200" id="nav-location" aria-label="Change city">
         <span class="text-brand-orange text-base leading-none mt-[1px]">📍</span> 
-        <span class="hidden sm:inline">Bangalore</span>
-        <span class="sm:hidden">BLR</span>
-      </div>
+        <span class="hidden sm:inline" id="nav-city-label">Select City</span>
+        <span class="sm:hidden" id="nav-city-short">City</span>
+      </button>
 
       <!-- Mobile Hamburger -->
       <button id="mobile-menu-toggle"
@@ -41,9 +45,13 @@
   <!-- Mobile Menu Drawer -->
   <div id="mobile-menu" class="md:hidden hidden">
     <div class="mt-4 pb-4 border-t border-warm-200 pt-4 flex flex-col gap-4">
+      {{ $section := .Section }}
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}"
-        class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2"
+      {{ $linkUrl := .URL }}
+      {{ if $section }}{{ $linkUrl = printf "/%s%s" $section .URL }}{{ end }}
+      <a href="{{ $linkUrl }}"
+        class="font-display font-600 text-deep/70 hover:text-brand-orange transition-colors text-lg px-2 nav-menu-link"
+        data-base-url="{{ .URL }}"
         onclick="closeMobileMenu()">
         {{ .Name }}
       </a>
@@ -51,6 +59,25 @@
       <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary text-center mt-2">
         Join the Circle ✨
       </a>
+    </div>
+  </div>
+
+  <!-- City Picker Modal -->
+  <div id="city-modal" class="fixed inset-0 z-[100] bg-deep/40 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="glass-card w-full max-w-md p-8 transform scale-95 opacity-0 transition-all duration-300" id="city-modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-display text-2xl font-bold">Choose your city</h3>
+        <button onclick="closeCityModal()" class="text-deep/50 hover:text-brand-orange text-xl">&times;</button>
+      </div>
+      <div class="flex flex-col gap-3">
+        <!-- We use JS to populate this or hardcode links for simplicity -->
+        <a href="/bangalore/" onclick="setCityPref('Bangalore', '/bangalore/')" class="btn-secondary w-full justify-start border-warm-200 hover:border-brand-indigo">
+          <span class="text-xl mr-2">📍</span> Bangalore
+        </a>
+        <a href="/mumbai/" onclick="setCityPref('Mumbai', '/mumbai/')" class="btn-secondary w-full justify-start border-warm-200 hover:border-brand-indigo">
+          <span class="text-xl mr-2">📍</span> Mumbai
+        </a>
+      </div>
     </div>
   </div>
 </nav>
@@ -100,9 +127,65 @@
     mobileMenu.classList.add('hidden');
     nav.classList.remove('menu-open');
     const lines = mobileToggle.querySelectorAll('span');
-    lines[0].style.transform = '';
-    lines[1].style.opacity = '1';
     lines[2].style.transform = '';
     lines[2].style.width = '1rem';
   }
+
+  // City Picker Modal Logic
+  const cityModal = document.getElementById('city-modal');
+  const cityModalContent = document.getElementById('city-modal-content');
+
+  function openCityModal() {
+    cityModal.classList.remove('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      cityModalContent.classList.remove('scale-95', 'opacity-0');
+      cityModalContent.classList.add('scale-100', 'opacity-100');
+    }, 10);
+  }
+
+  function closeCityModal() {
+    cityModalContent.classList.remove('scale-100', 'opacity-100');
+    cityModalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      cityModal.classList.add('opacity-0', 'pointer-events-none');
+    }, 300);
+  }
+
+  function setCityPref(name, url) {
+    localStorage.setItem('userCity', name);
+    localStorage.setItem('userCityUrl', url);
+    // Link navigation will happen automatically
+  }
+
+  // Update Nav label on load based on localStorage or URL
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedCity = localStorage.getItem('userCity');
+    const savedUrl = localStorage.getItem('userCityUrl');
+    const labelFull = document.getElementById('nav-city-label');
+    const labelShort = document.getElementById('nav-city-short');
+    
+    if (savedCity && labelFull && labelShort) {
+      labelFull.textContent = savedCity;
+      labelShort.textContent = savedCity.substring(0, 3).toUpperCase();
+    }
+
+    // Intercept nav link clicks if we are on root with no city selected
+    document.querySelectorAll('.nav-menu-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        // If the href is still un-scoped (e.g., "/sessions/"), it means we have no .Section
+        if (href.startsWith('/sessions') || href.startsWith('/mentors')) {
+          e.preventDefault();
+          if (savedUrl) {
+            // we have a saved city, append to it
+            const baseUrl = link.getAttribute('data-base-url');
+            window.location.href = savedUrl + baseUrl.substring(1);
+          } else {
+            // no city selected, open modal
+            openCityModal();
+          }
+        }
+      });
+    });
+  });
 </script>

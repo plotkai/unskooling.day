@@ -20,10 +20,14 @@
         <h4 class="font-display font-bold text-white mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
         <ul class="space-y-2.5">
           <li><a href="/" class="text-white/60 hover:text-brand-orange transition-colors text-sm">Home</a></li>
-          <li><a href="/sessions/" class="text-white/60 hover:text-brand-orange transition-colors text-sm">Browse
-              Sessions</a></li>
-          <li><a href="/mentors/" class="text-white/60 hover:text-brand-orange transition-colors text-sm">Meet
-              Mentors</a></li>
+          {{ $sessionsUrl := "/sessions/" }}
+          {{ $mentorsUrl := "/mentors/" }}
+          {{ if .Section }}
+            {{ $sessionsUrl = printf "/%s/sessions/" .Section }}
+            {{ $mentorsUrl = printf "/%s/mentors/" .Section }}
+          {{ end }}
+          <li><a href="{{ $sessionsUrl }}" data-base-url="/sessions/" class="text-white/60 hover:text-brand-orange transition-colors text-sm nav-menu-link">Browse Sessions</a></li>
+          <li><a href="{{ $mentorsUrl }}" data-base-url="/mentors/" class="text-white/60 hover:text-brand-orange transition-colors text-sm nav-menu-link">Meet Mentors</a></li>
           <li><a href="{{ .Site.Params.mentorFormURL }}" target="_blank"
               class="text-white/60 hover:text-brand-orange transition-colors text-sm">Become a Mentor</a></li>
           <li><a href="{{ .Site.Params.societyFormURL }}" target="_blank"

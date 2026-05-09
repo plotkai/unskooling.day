@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="pt-28 pb-20 px-6 lg:px-12">
   <div class="max-w-5xl mx-auto">
-    <a href="/sessions/"
+    <a href="{{ printf "/%s/sessions/" .Section }}"
       class="text-brand-indigo text-sm font-display font-semibold hover:underline mb-6 inline-flex items-center gap-1">
       ← All Sessions
     </a>
