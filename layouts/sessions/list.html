@@ -9,11 +9,29 @@
     </div>
 
     <!-- Category Filter Tabs -->
+    {{ $categories := slice }}
+    {{ range .Pages }}
+      {{ if .Params.category }}
+        {{ $categories = $categories | append .Params.category }}
+      {{ end }}
+    {{ end }}
+    {{ $uniqueCategories := $categories | uniq }}
+    
     <div class="flex flex-wrap justify-center gap-3 mb-10" id="session-filters">
       <button class="filter-tab active" onclick="filterSessions('all', this)">All</button>
-      <button class="filter-tab" onclick="filterSessions('music', this)">🎵 Music</button>
-      <button class="filter-tab" onclick="filterSessions('swimming', this)">🏊 Swimming</button>
-      <button class="filter-tab" onclick="filterSessions('business', this)">💼 Business</button>
+      {{ range $uniqueCategories }}
+        {{ $catLower := lower . }}
+        {{ $icon := "✨ " }}
+        {{ if eq $catLower "music" }}{{ $icon = "🎵 " }}
+        {{ else if eq $catLower "swimming" }}{{ $icon = "🏊 " }}
+        {{ else if eq $catLower "business" }}{{ $icon = "💼 " }}
+        {{ else if eq $catLower "dance" }}{{ $icon = "💃 " }}
+        {{ else if eq $catLower "technology" }}{{ $icon = "💻 " }}
+        {{ else if eq $catLower "stem" }}{{ $icon = "🔬 " }}
+        {{ else if eq $catLower "logic & strategy" }}{{ $icon = "🎲 " }}
+        {{ end }}
+        <button class="filter-tab" onclick="filterSessions('{{ $catLower }}', this)">{{ $icon }}{{ . }}</button>
+      {{ end }}
     </div>
 
     <!-- Session Gallery Grid -->

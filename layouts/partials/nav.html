@@ -61,6 +61,7 @@
       </a>
     </div>
   </div>
+</nav>
 
   <!-- City Picker Modal -->
   <div id="city-modal" class="fixed inset-0 z-[100] bg-deep/40 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
@@ -80,7 +81,6 @@
       </div>
     </div>
   </div>
-</nav>
 
 <script>
   // Sticky nav scroll effect
@@ -136,6 +136,7 @@
   const cityModalContent = document.getElementById('city-modal-content');
 
   function openCityModal() {
+    document.body.style.overflow = 'hidden';
     cityModal.classList.remove('opacity-0', 'pointer-events-none');
     setTimeout(() => {
       cityModalContent.classList.remove('scale-95', 'opacity-0');
@@ -144,6 +145,7 @@
   }
 
   function closeCityModal() {
+    document.body.style.overflow = '';
     cityModalContent.classList.remove('scale-100', 'opacity-100');
     cityModalContent.classList.add('scale-95', 'opacity-0');
     setTimeout(() => {
@@ -163,10 +165,16 @@
     const savedUrl = localStorage.getItem('userCityUrl');
     const labelFull = document.getElementById('nav-city-label');
     const labelShort = document.getElementById('nav-city-short');
+    const footerLabel = document.getElementById('footer-city-label');
     
-    if (savedCity && labelFull && labelShort) {
-      labelFull.textContent = savedCity;
-      labelShort.textContent = savedCity.substring(0, 3).toUpperCase();
+    if (savedCity) {
+      if (labelFull && labelShort) {
+        labelFull.textContent = savedCity;
+        labelShort.textContent = savedCity.substring(0, 3).toUpperCase();
+      }
+      if (footerLabel) {
+        footerLabel.textContent = savedCity;
+      }
     }
 
     // Intercept nav link clicks if we are on root with no city selected

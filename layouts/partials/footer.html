@@ -44,10 +44,10 @@
         <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary text-sm" id="footer-join-cta">
           Join the Circle ✨
         </a>
-        <div class="mt-6 flex items-center gap-2 text-white/40 text-xs">
+        <button onclick="openCityModal()" class="mt-6 flex items-center gap-2 text-white/40 hover:text-brand-orange transition-colors text-xs" aria-label="Change city">
           <span>📍</span>
-          <span>India</span>
-        </div>
+          <span id="footer-city-label">Select City</span>
+        </button>
       </div>
     </div>
 
