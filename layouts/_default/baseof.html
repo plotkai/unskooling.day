@@ -37,6 +37,34 @@
         observer.observe(el);
       });
     });
+
+    /* ── Carousel arrow scrolling ── */
+    function scrollCarousel(trackId, direction) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      const card = track.querySelector('.carousel-card');
+      const cardWidth = card ? card.offsetWidth + 24 : 340; // 24 = 1.5rem gap
+      track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    }
+
+    // Update arrow disabled states on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.carousel-track').forEach(track => {
+        const wrapper = track.closest('.carousel-wrapper');
+        if (!wrapper) return;
+        const prevBtn = wrapper.querySelector('.carousel-arrow-left');
+        const nextBtn = wrapper.querySelector('.carousel-arrow-right');
+
+        function updateArrows() {
+          if (prevBtn) prevBtn.classList.toggle('disabled', track.scrollLeft <= 4);
+          if (nextBtn) nextBtn.classList.toggle('disabled',
+            track.scrollLeft >= track.scrollWidth - track.clientWidth - 4);
+        }
+
+        track.addEventListener('scroll', updateArrows, { passive: true });
+        updateArrows();
+      });
+    });
   </script>
 </body>
 </html>

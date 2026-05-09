@@ -147,33 +147,41 @@
       <p class="text-deep/60 max-w-xl mx-auto">Real skills, taught by real people. Tap a category to explore.</p>
     </div>
 
-    <!-- Session Highlight Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {{ range where .Site.RegularPages "Section" "sessions" }}
-      <a href="{{ .Permalink }}" class="glass-card overflow-hidden reveal group block">
-        {{ with .Params.image }}
-        <div class="overflow-hidden">
-          <img src="{{ . }}" alt="{{ $.Title }}"
-            class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-        {{ else }}
-        <div class="w-full h-52 bg-gradient-to-br from-warm-100 to-warm-200 flex items-center justify-center text-5xl">
-          {{ if eq ($.Params.category | lower) "music" }}🎵{{ else if eq ($.Params.category | lower) "swimming" }}🏊{{
-          else }}💼{{ end }}
-        </div>
+    <!-- Session Highlight Cards - Horizontal Scroll Carousel -->
+    <div class="carousel-wrapper" id="sessions-carousel-wrapper">
+      <button class="carousel-arrow carousel-arrow-left" id="sessions-prev" aria-label="Previous sessions"
+        onclick="scrollCarousel('sessions-track', -1)">&#9664;</button>
+
+      <div class="carousel-track" id="sessions-track">
+        {{ range where .Site.RegularPages "Section" "sessions" }}
+        <a href="{{ .Permalink }}" class="carousel-card glass-card overflow-hidden group block">
+          {{ with .Params.image }}
+          <div class="overflow-hidden">
+            <img src="{{ . }}" alt="{{ $.Title }}"
+              class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          {{ else }}
+          <div class="w-full h-52 bg-gradient-to-br from-warm-100 to-warm-200 flex items-center justify-center text-5xl">
+            {{ if eq ($.Params.category | lower) "music" }}🎵{{ else if eq ($.Params.category | lower) "swimming" }}🏊{{
+            else }}💼{{ end }}
+          </div>
+          {{ end }}
+          <div class="p-6">
+            <span class="badge badge-{{ .Params.category | lower }} mb-3">{{ .Params.category }}</span>
+            <h3 class="font-display text-xl font-bold mb-2 group-hover:text-brand-orange transition-colors">{{ .Title }}
+            </h3>
+            <p class="text-deep/60 text-sm line-clamp-2 mb-4">{{ .Params.description }}</p>
+            <span
+              class="text-brand-orange font-display font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+              Explore Details <span class="transition-transform group-hover:translate-x-1">→</span>
+            </span>
+          </div>
+        </a>
         {{ end }}
-        <div class="p-6">
-          <span class="badge badge-{{ .Params.category | lower }} mb-3">{{ .Params.category }}</span>
-          <h3 class="font-display text-xl font-bold mb-2 group-hover:text-brand-orange transition-colors">{{ .Title }}
-          </h3>
-          <p class="text-deep/60 text-sm line-clamp-2 mb-4">{{ .Params.description }}</p>
-          <span
-            class="text-brand-orange font-display font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-            Explore Details <span class="transition-transform group-hover:translate-x-1">→</span>
-          </span>
-        </div>
-      </a>
-      {{ end }}
+      </div>
+
+      <button class="carousel-arrow carousel-arrow-right" id="sessions-next" aria-label="Next sessions"
+        onclick="scrollCarousel('sessions-track', 1)">&#9654;</button>
     </div>
 
     <div class="text-center mt-10 reveal">
@@ -193,30 +201,39 @@
       </h2>
       <p class="text-deep/60 max-w-xl mx-auto">Your neighbors. Their passions. Your kids' future skills.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {{ range where .Site.RegularPages "Section" "mentors" }}
-      <a href="{{ .Permalink }}" class="mentor-card reveal group block">
-        {{ with .Params.photo }}
-        <div class="overflow-hidden">
-          <img src="{{ . }}" alt="{{ $.Title }}"
-            class="mentor-photo transition-transform duration-500 group-hover:scale-105">
-        </div>
-        {{ else }}
-        <div
-          class="w-full h-56 bg-gradient-to-br from-brand-indigo/10 to-brand-orange/10 flex items-center justify-center text-5xl">
-          👤</div>
+    <!-- Mentor Cards - Horizontal Scroll Carousel -->
+    <div class="carousel-wrapper" id="mentors-carousel-wrapper">
+      <button class="carousel-arrow carousel-arrow-left" id="mentors-prev" aria-label="Previous mentors"
+        onclick="scrollCarousel('mentors-track', -1)">&#9664;</button>
+
+      <div class="carousel-track" id="mentors-track">
+        {{ range where .Site.RegularPages "Section" "mentors" }}
+        <a href="{{ .Permalink }}" class="carousel-card mentor-card group block">
+          {{ with .Params.photo }}
+          <div class="overflow-hidden">
+            <img src="{{ . }}" alt="{{ $.Title }}"
+              class="mentor-photo transition-transform duration-500 group-hover:scale-105">
+          </div>
+          {{ else }}
+          <div
+            class="w-full h-56 bg-gradient-to-br from-brand-indigo/10 to-brand-orange/10 flex items-center justify-center text-5xl">
+            👤</div>
+          {{ end }}
+          <div class="p-6">
+            <h3 class="font-display text-lg font-bold mb-1 group-hover:text-brand-orange transition-colors">{{ .Title }}
+            </h3>
+            <p class="text-brand-indigo text-sm font-semibold mb-3">{{ .Params.skill }}</p>
+            <span
+              class="text-brand-orange font-display font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+              View Profile <span class="transition-transform group-hover:translate-x-1">→</span>
+            </span>
+          </div>
+        </a>
         {{ end }}
-        <div class="p-6">
-          <h3 class="font-display text-lg font-bold mb-1 group-hover:text-brand-orange transition-colors">{{ .Title }}
-          </h3>
-          <p class="text-brand-indigo text-sm font-semibold mb-3">{{ .Params.skill }}</p>
-          <span
-            class="text-brand-orange font-display font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-            View Profile <span class="transition-transform group-hover:translate-x-1">→</span>
-          </span>
-        </div>
-      </a>
-      {{ end }}
+      </div>
+
+      <button class="carousel-arrow carousel-arrow-right" id="mentors-next" aria-label="Next mentors"
+        onclick="scrollCarousel('mentors-track', 1)">&#9654;</button>
     </div>
     <div class="text-center mt-10 reveal flex flex-wrap justify-center gap-4">
       <a href="/mentors/" class="btn-secondary">

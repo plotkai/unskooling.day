@@ -404,3 +404,126 @@ h1, h2, h3, h4, h5, h6 {
   background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%);
   pointer-events: none;
 }
+
+/* ============================================
+   HORIZONTAL SCROLL CAROUSEL
+   ============================================ */
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0.25rem 1.5rem;
+  flex: 1;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 320px;
+  scroll-snap-align: start;
+}
+
+/* On medium screens, show ~2 cards */
+@media (min-width: 640px) {
+  .carousel-card {
+    width: 340px;
+  }
+}
+
+/* On large screens, show ~3 cards */
+@media (min-width: 1024px) {
+  .carousel-card {
+    width: 360px;
+  }
+}
+
+/* Arrow buttons — ghost translucent circles */
+.carousel-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(30, 27, 46, 0.08);
+  border: none;
+  color: rgba(30, 27, 46, 0.3);
+  font-size: 0.65rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  z-index: 2;
+  user-select: none;
+  line-height: 1;
+}
+
+.carousel-arrow:hover {
+  background: rgba(30, 27, 46, 0.15);
+  color: rgba(30, 27, 46, 0.65);
+  transform: scale(1.08);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.94);
+}
+
+.carousel-arrow.disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Sticky-style fade edges to hint scrollability */
+.carousel-wrapper::before,
+.carousel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel-wrapper::before {
+  left: 2.75rem;
+  background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+}
+
+.carousel-wrapper::after {
+  right: 2.75rem;
+  background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+}
+
+/* On mobile — smaller arrows, wider cards */
+@media (max-width: 479px) {
+  .carousel-arrow {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.6rem;
+  }
+  .carousel-wrapper::before,
+  .carousel-wrapper::after {
+    display: none;
+  }
+  .carousel-card {
+    width: 80vw;
+  }
+}
