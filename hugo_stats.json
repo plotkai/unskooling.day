@@ -29,9 +29,6 @@
       "ul"
     ],
     "classes": [
-      "!px-3",
-      "!py-2",
-      "!text-xs",
       "absolute",
       "active",
       "animate-pulse-glow",
@@ -211,9 +208,6 @@
       "rounded-lg",
       "session-card",
       "shadow-lg",
-      "sm:!px-6",
-      "sm:!py-3",
-      "sm:!text-sm",
       "sm:gap-4",
       "sm:grid-cols-2",
       "sm:hidden",
@@ -283,7 +277,6 @@
       "mentors",
       "mobile-menu",
       "mobile-menu-toggle",
-      "nav-join-cta",
       "nav-location",
       "nav-logo",
       "nav-mentors",
