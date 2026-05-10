@@ -1,6 +1,6 @@
 ---
 title: "Guitar Basics for Kids"
-category: "Music"
+category: "Creative Arts"
 mentor: "priya-sharma"
 price_model: "₹500/session"
 status: "Active"

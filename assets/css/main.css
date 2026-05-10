@@ -151,6 +151,31 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
 }
 
+/* Tertiary button */
+.btn-tertiary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #0D9488, #0F766E);
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-tertiary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.45);
+  background: linear-gradient(135deg, #0F766E, #0D9488);
+}
+
 /* Badge */
 .badge {
   display: inline-flex;

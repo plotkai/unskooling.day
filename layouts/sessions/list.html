@@ -5,56 +5,62 @@
       <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
         All <span class="gradient-text">Sessions</span>
       </h1>
-      <p class="text-deep/60 max-w-xl mx-auto">Explore all the learning experiences available across our communities.</p>
+      <p class="text-deep/60 max-w-xl mx-auto">Explore all the learning experiences available across our communities.
+      </p>
     </div>
 
     <!-- Category Filter Tabs -->
     {{ $categories := slice }}
     {{ range .Pages }}
-      {{ if .Params.category }}
-        {{ $categories = $categories | append .Params.category }}
-      {{ end }}
+    {{ if .Params.category }}
+    {{ $categories = $categories | append .Params.category }}
+    {{ end }}
     {{ end }}
     {{ $uniqueCategories := $categories | uniq }}
-    
+
     <div class="flex flex-wrap justify-center gap-3 mb-10" id="session-filters">
       <button class="filter-tab active" onclick="filterSessions('all', this)">All</button>
       {{ range $uniqueCategories }}
-        {{ $catLower := lower . }}
-        {{ $icon := "✨ " }}
-        {{ if eq $catLower "music" }}{{ $icon = "🎵 " }}
-        {{ else if eq $catLower "swimming" }}{{ $icon = "🏊 " }}
-        {{ else if eq $catLower "business" }}{{ $icon = "💼 " }}
-        {{ else if eq $catLower "dance" }}{{ $icon = "💃 " }}
-        {{ else if eq $catLower "technology" }}{{ $icon = "💻 " }}
-        {{ else if eq $catLower "stem" }}{{ $icon = "🔬 " }}
-        {{ else if eq $catLower "logic & strategy" }}{{ $icon = "🎲 " }}
-        {{ end }}
-        <button class="filter-tab" onclick="filterSessions('{{ $catLower }}', this)">{{ $icon }}{{ . }}</button>
+      {{ $catLower := lower . }}
+      {{ $icon := "✨ " }}
+      {{ if eq $catLower "indoors" }}{{ $icon = "🎲 " }}
+      {{ else if eq $catLower "stem" }}{{ $icon = "🔬 " }}
+      {{ else if eq $catLower "creative arts" }}{{ $icon = "🎸 " }}
+      {{ else if eq $catLower "outdoors" }}{{ $icon = "🏕️ " }}
+      {{ else if eq $catLower "sports" }}{{ $icon = "⚽ " }}
+      {{ else if eq $catLower "business" }}{{ $icon = "💼 " }}
+      {{ end }}
+      <button class="filter-tab" onclick="filterSessions('{{ $catLower }}', this)">{{ $icon }}{{ . }}</button>
       {{ end }}
     </div>
 
     <!-- Session Gallery Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="session-grid">
       {{ range .Pages }}
-      <a href="{{ .Permalink }}" class="glass-card overflow-hidden group block session-card" data-category="{{ .Params.category | lower }}">
+      <a href="{{ .Permalink }}" class="glass-card overflow-hidden group block session-card"
+        data-category="{{ .Params.category | lower }}">
         {{ with .Params.image }}
         <div class="overflow-hidden">
-          <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
+          <img src="{{ . }}" alt="{{ $.Title }}"
+            class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
         </div>
         {{ else }}
         <div class="w-full h-52 bg-gradient-to-br from-warm-100 to-warm-200 flex items-center justify-center text-5xl">
-          {{ if eq ($.Params.category | lower) "music" }}🎵{{ else if eq ($.Params.category | lower) "swimming" }}🏊{{ else }}💼{{ end }}
+          {{ if eq ($.Params.category | lower) "music" }}🎵{{ else if eq ($.Params.category | lower) "swimming" }}🏊{{
+          else }}💼{{ end }}
         </div>
         {{ end }}
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
             <span class="badge badge-{{ .Params.category | lower }}">{{ .Params.category }}</span>
-            <span class="badge {{ if eq .Params.status "Active" }}badge-active{{ else }}badge-upcoming{{ end }}">{{ .Params.status }}</span>
+            <span class="badge {{ if eq .Params.status " Active" }}badge-active{{ else }}badge-upcoming{{ end }}">{{
+              .Params.status }}</span>
           </div>
-          <h2 class="font-display text-xl font-bold mb-2 group-hover:text-brand-orange transition-colors">{{ .Title }}</h2>
+          <h2 class="font-display text-xl font-bold mb-2 group-hover:text-brand-orange transition-colors">{{ .Title }}
+          </h2>
           <p class="text-deep/60 text-sm mb-4 line-clamp-2">{{ .Params.description }}</p>
-          <span class="text-brand-orange font-display font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+          <span
+            class="text-brand-orange font-display font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
             View Details <span class="transition-transform group-hover:translate-x-1">→</span>
           </span>
         </div>

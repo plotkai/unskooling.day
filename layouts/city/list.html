@@ -28,6 +28,9 @@
         <a href="{{ .Site.Params.societyFormURL }}" target="_blank" class="btn-secondary" id="hero-society-cta">
           🏘️ Bring to My Society
         </a>
+        <a href="{{ .RelPermalink }}sessions/" class="btn-tertiary" id="hero-sessions-cta">
+          Explore All Sessions 📚
+        </a>
       </div>
       <!-- <div class="mt-8 flex items-center gap-6 text-sm text-deep/50">
         <span class="flex items-center gap-1.5">✅ Society-vetted mentors</span>
@@ -143,33 +146,15 @@
     <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
       Explore <span class="gradient-text">Sessions</span>
     </h2>
-    <p class="text-deep/60 max-w-xl mx-auto mb-8">Real skills, taught by real people. Tap a category to explore.</p>
-    <a href="{{ .RelPermalink }}sessions/" class="btn-secondary">
-      View All Sessions 📚
+    <p class="text-deep/60 max-w-xl mx-auto mb-8">Real skills, taught by real people.</p>
+    <a href="{{ .RelPermalink }}sessions/" class="btn-tertiary">
+      Explore All Sessions 📚
     </a>
   </div>
 </section>
 
-<!-- ==================== MENTOR PROFILES ==================== -->
-<section id="mentors" class="py-10 px-6 lg:px-12">
-  <div class="max-w-7xl mx-auto text-center reveal">
-    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
-      Meet the <span class="gradient-text">Mentors</span>
-    </h2>
-    <p class="text-deep/60 max-w-xl mx-auto mb-8">Your neighbors. Their passions. Your kids' future skills.</p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="{{ .RelPermalink }}mentors/" class="btn-secondary">
-        View All Mentors 👥
-      </a>
-      <a href="{{ .Site.Params.mentorFormURL }}" target="_blank" class="btn-secondary" id="become-mentor-cta">
-        🙋 Become a Mentor
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ==================== SAFETY & TRUST ==================== -->
-<section id="trust" class="py-20 px-6 lg:px-12 bg-white">
+<section id="trust" class="py-20 px-6 lg:px-12">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-14 reveal">
       <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
@@ -217,6 +202,24 @@
   </div>
 </section>
 
+<!-- ==================== MENTOR PROFILES ==================== -->
+<section id="mentors" class="py-10 px-6 lg:px-12 bg-white">
+  <div class="max-w-7xl mx-auto text-center reveal">
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+      Meet the <span class="gradient-text">Mentors</span>
+    </h2>
+    <p class="text-deep/60 max-w-xl mx-auto mb-8">Your neighbors. Their passions. Your kids' future skills.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="{{ .RelPermalink }}mentors/" class="btn-secondary">
+        View All Mentors 👥
+      </a>
+      <a href="{{ .Site.Params.mentorFormURL }}" target="_blank" class="btn-secondary" id="become-mentor-cta">
+        🙋 Become a Mentor
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== GALLERY ==================== -->
 <section id="gallery" class="py-20 px-6 lg:px-12">
   <div class="max-w-7xl mx-auto">
@@ -245,6 +248,11 @@
         </div>
       </div>
       {{ end }}
+    </div>
+    <div class="mt-12 text-center flex justify-center">
+      <a href="{{ .RelPermalink }}sessions/" class="btn-tertiary">
+        Explore All Sessions 📚
+      </a>
     </div>
   </div>
 </section>

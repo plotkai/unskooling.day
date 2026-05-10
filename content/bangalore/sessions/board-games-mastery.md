@@ -1,6 +1,6 @@
 ---
 title: "Board Games Mastery"
-category: "Logic & Strategy"
+category: "Indoors"
 mentor: "anita-krishnan"
 price_model: "₹300/session"
 status: "Active"

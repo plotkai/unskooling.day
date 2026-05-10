@@ -1,6 +1,6 @@
 ---
 title: "Dance with me"
-category: "Dance"
+category: "Creative Arts"
 mentor: "dev-utkarsh"
 price_model: "₹400/session"
 status: "Active"

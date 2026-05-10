@@ -1,6 +1,6 @@
 ---
 title: "Brain vs CPU"
-category: "Technology"
+category: "STEM"
 mentor: "anita-krishnan"
 price_model: "₹600/session"
 status: "Active"

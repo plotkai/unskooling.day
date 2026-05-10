@@ -1,6 +1,6 @@
 ---
 title: "Swimming for Beginners"
-category: "Swimming"
+category: "Sports"
 mentor: "rahul-menon"
 price_model: "₹400/session"
 status: "Active"
