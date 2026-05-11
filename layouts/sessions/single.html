@@ -158,7 +158,17 @@
       <h3 class="font-display text-xl font-bold mb-3">Interested in {{ .Title }}?</h3>
       <p class="text-deep/60 text-sm mb-6 max-w-md mx-auto">Sign up to get notified when this session is available in
         your society.</p>
-      <a href="{{ .Site.Params.joinFormURL }}" target="_blank" class="btn-primary">
+        
+      {{ $city := .Section | title }}
+      {{ $category := .Params.category }}
+      {{ $sessionName := .Title }}
+      {{ $formUrl := .Site.Params.joinFormURL }}
+      
+      {{ $queryString := querify "entry.762986523" $city "entry.768171460" $category "entry.488203779" $sessionName }}
+      {{ $separator := "?" }}{{ if strings.Contains $formUrl "?" }}{{ $separator = "&" }}{{ end }}
+      {{ $prefilledUrl := printf "%s%s%s" $formUrl $separator $queryString }}
+
+      <a href="{{ $prefilledUrl | safeURL }}" target="_blank" class="btn-primary">
         Join the Circle ✨
       </a>
     </div>

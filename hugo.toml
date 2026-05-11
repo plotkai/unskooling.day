@@ -6,7 +6,7 @@ summaryLength = 20
 [params]
   tagline = "Real-world skills, taught by neighbors, in your community hall."
   description = "A community-based experiential learning platform connecting kids in Bangalore's gated communities with passionate neighbor-mentors."
-  joinFormURL = "https://forms.gle/ZZxzmyht9kSb8Zv46"
+  joinFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdw8GIgu6LdsQ-uYQbcPDG_Chc3oBgfS7mscPDd6aqOwi1kUA/viewform?usp=dialog"
   societyFormURL = "https://forms.gle/hL4BetHe43yCFm1c8"
   mentorFormURL = "https://forms.gle/4YHumKyhqc3r6paeA"
 
