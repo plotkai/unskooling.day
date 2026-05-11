@@ -1,6 +1,6 @@
 ---
 title: "Bollywood Dance"
-category: "Dance"
+category: "Creative Arts"
 mentor: "ajay-sharma"
 price_model: "₹400/session"
 status: "Active"
